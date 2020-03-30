@@ -424,7 +424,7 @@ const updateLast2 = (req, res) => {
   // You can treat objects just like that - objects.
   // Normally you'd find a specific object, but we will only
   // give the user the ability to update our last object
-  lastAdded.age++;
+  lastAdded2.age++;
 
   // once you change all the object properties you want,
   // then just call the Model object's save function
