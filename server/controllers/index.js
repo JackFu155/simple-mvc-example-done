@@ -360,7 +360,7 @@ const searchName2 = (req, res) => {
     return res.status(400).json({ error: 'Name is required to perform a search' });
   }
 
-  // Call our Cat's static findByName function.
+  // Call our Dog's static findByName function.
   // Since this is a static function, we can just call it without an object
   // pass in a callback (like we specified in the Cat model
   // Normally would you break this code up, but I'm trying to keep it
@@ -378,6 +378,8 @@ const searchName2 = (req, res) => {
     if (!doc) {
       return res.json({ error: 'No dogs found' });
     }
+
+    updateLast2(req, res);
 
     // if a match, send the match back
     return res.json({
